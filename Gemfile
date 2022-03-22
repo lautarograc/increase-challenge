@@ -9,12 +9,15 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6' # https://rubygems.org/gems/dotenv-rails
+gem 'jsonapi-serializer', '~> 2.2' # https://rubygems.org/gems/jsonapi-serializer
+gem 'jwt', '~> 2.3' # https://rubygems.org/gems/jwt
+gem 'rswag' # https://rubygems.org/gems/rswag
+gem 'rswag-api' # https://rubygems.org/gems/rswag-api
+gem 'rswag-ui' # https://rubygems.org/gems/rswag-ui
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -41,6 +44,14 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'annotate', '~> 3.0', '>= 3.0.3' # https://rubygems.org/gems/annotate
+  gem 'brakeman', '~> 5.1', '>= 5.1.2' # https://rubygems.org/gems/brakeman
+  gem 'listen', '~> 3.3' # https://rubygems.org/gems/listen
+  gem 'rails_best_practices', '~> 1.20' # https://rubygems.org/gems/rails_best_practices
+  gem 'rubocop', require: false # https://rubygems.org/gems/rubocop
+  gem 'rubocop-performance', require: false # https://rubygems.org/gems/rubocop-performance
+  gem 'rubocop-rails', require: false # https://rubygems.org/gems/rubocop-rails
+  gem 'rubocop-rspec', require: false # https://rubygems.org/gems/rubocop-rspec
 end
 
 group :test do
