@@ -29,8 +29,15 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
 
 group :development, :test do
+  gem 'annotate', '~> 3.0', '>= 3.0.3' # https://rubygems.org/gems/annotate
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1' # https://rubygems.org/gems/factory_bot_rails
+  gem 'pry-byebug', '~> 3.9', platform: :mri # https://rubygems.org/gems/pry-byebug
+  gem 'pry-rails', '~> 0.3.9' # https://rubygems.org/gems/pry-rails
+  gem 'rspec-rails', '~> 4.1' # https://rubygems.org/gems/rspec-rails
+  gem 'rswag-specs' # https://rubygems.org/gems/rswag-specs
+
 end
 
 group :development do
@@ -46,6 +53,13 @@ group :development do
   gem 'rubocop-rails', require: false # https://rubygems.org/gems/rubocop-rails
   gem 'rubocop-rspec', require: false # https://rubygems.org/gems/rubocop-rspec
 end
+
+group :test do
+  gem 'faker', '~> 2.13' # https://rubygems.org/gems/faker
+  gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2' # https://rubygems.org/gems/shoulda-matchers
+  gem 'simplecov', '~> 0.13.0', require: false # https://rubygems.org/gems/simplecov
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
