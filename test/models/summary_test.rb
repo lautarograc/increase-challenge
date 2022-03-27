@@ -3,7 +3,7 @@ require "test_helper"
 class SummaryTest < ActiveSupport::TestCase
   RSpec.describe Summary, type: :model do
     subject { build(:summary) }
-  
+    
     describe 'factory' do
       it { is_expected.to be_valid }
     end
