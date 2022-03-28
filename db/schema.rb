@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_03_27_014521) do
   create_table "discounts", primary_key: "discount_id", id: :string, force: :cascade do |t|
     t.string "summary_id", null: false
     t.decimal "amount"
-    t.integer "discount_type"
+    t.string "discount_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["summary_id"], name: "index_discounts_on_summary_id"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_03_27_014521) do
   create_table "transactions", primary_key: "transaction_id", id: :string, force: :cascade do |t|
     t.string "summary_id", null: false
     t.decimal "amount"
+    t.string "approved"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["summary_id"], name: "index_transactions_on_summary_id"

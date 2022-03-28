@@ -1,5 +1,5 @@
 class Summary < ApplicationRecord
-    self.primary_key = :payment_id
+    self.primary_key = :summary_id
 
     has_many :transactions
     has_many :discounts

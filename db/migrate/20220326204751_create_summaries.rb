@@ -7,7 +7,7 @@ class CreateSummaries < ActiveRecord::Migration[6.1]
       t.decimal :amount
       t.decimal :discount
       t.decimal :total_amount
-      t.datetime :date
+      t.date :date
       t.timestamps
     end
     add_foreign_key :summaries, :clients, column: :client_id, primary_key: :client_id

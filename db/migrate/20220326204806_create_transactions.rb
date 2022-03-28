@@ -4,7 +4,7 @@ class CreateTransactions < ActiveRecord::Migration[6.1]
       t.string :transaction_id, primary_key: true
       t.string :summary_id, null: false
       t.decimal :amount
-      
+      t.string :approved
       t.timestamps
     end
     add_foreign_key :transactions, :summaries, column: :summary_id, primary_key: :summary_id

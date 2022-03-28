@@ -4,7 +4,7 @@ class CreateDiscounts < ActiveRecord::Migration[6.1]
       t.string :discount_id, primary_key: true
       t.string :summary_id, null: false
       t.decimal :amount
-      t.integer :discount_type
+      t.string :discount_type
 
       t.timestamps
     end
