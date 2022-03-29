@@ -23,7 +23,7 @@ module Api
 
       def account
         @client = Client.find(params[:id])
-        @account = Hash[pay: 0, paid: 0]
+        @account = Hash[client: @client.id, pay: 0, paid: 0]
         @client.transactions.each do |t|
           if t.approved == '1'
             if t.summary.date < Date.today
