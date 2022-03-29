@@ -8,11 +8,10 @@ class ParseClient
           response = Faraday.get("https://increase-transactions.herokuapp.com/clients/#{client_id}") do |req|
             req.headers['Authorization'] = 'Bearer 1234567890qwertyuiopasdfghjklzxcvbnm'
           end
-          next unless response.success?
+          next unless response.success? && response.body.present?
   
           data = JSON.parse response.body
           client.update(email: data['email'],
-                        client_id: data['id'],
                         first_name: data['first_name'],
                         last_name: data['last_name'],
                         job: data['job'],

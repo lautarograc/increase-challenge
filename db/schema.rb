@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2022_03_27_014521) do
     t.decimal "amount"
     t.decimal "discount"
     t.decimal "total_amount"
-    t.datetime "date"
+    t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["client_id"], name: "index_summaries_on_client_id"
