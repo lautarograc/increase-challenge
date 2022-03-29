@@ -1,9 +1,12 @@
 # README
 
-##    Dependencies:  
-Ruby 2.7.4  
-Rails 6.1.x  
-Postgresql
+##    Dependencies:
+
+            Ruby 2.7.4  
+            Rails 6.1.x  
+            Postgresql
+
+[Postman documentation](https://documenter.getpostman.com/view/19395140/UVyoWdFD)
 
 Steps to run the app (assuming basic git knowlegde, functioning dependencies and basic troubleshooting skillls):
 
@@ -11,35 +14,34 @@ Clone this repository to your local machine.
 
 CD into the cloned repo.
 
-Create and migrate the database by running  
-\`rails db:create && rails db:migrate
+Create and migrate the database by running
+
+```
+rails db:create && rails db:migrate
+```
 
 Start the server by running
 
-\`rails s
+```shell
+rails s
+```
 
 IMPORTANT NOTE: As the project fetches, parses and persists data using an initializer, running your server may take a while. It's normal.
 
-##### Navigate through the API by either making cURL requests as documented in postman or simply visit the routes in your favourite browser. It's going to render jSON data anyways.  
-  
-\[Postman documentation\](https://documenter.getpostman.com/view/19395140/UVyoWdFD)
+##### Navigate through the API by either making cURL requests as documented in postman or simply visit the routes in your favourite browser. It's going to render jSON data anyways.
 
-#### What went well in the project?  
- 
+#### What went well in the project?
 
 *   Satisfactory usage of design patterns.
 *   Logic firmly encapsulated and modularized.
 *   Implementation of good practices, convention and RESTful routing.
 
-####   
-What could be improved?  
- 
+What could be improved?  
 
 *   Parsing algorithms
 *   Controllers (migrate to skinny controller convention)
 *   Documentation
 
-####   
 What is being worked at?
 
 (by order of priority, first bullet being the most urgent)
