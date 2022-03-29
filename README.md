@@ -41,6 +41,7 @@ What could be improved?  
 *   Parsing algorithms
 *   Controllers (migrate to skinny controller convention)
 *   Documentation
+*   Git workflow
 
 What is being worked at?
 
