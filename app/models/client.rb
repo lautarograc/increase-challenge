@@ -1,7 +1,9 @@
-class Client < ApplicationRecord
-    self.primary_key = :client_id
+# frozen_string_literal: true
 
-    has_many :summaries
-    has_many :transactions, through: :summaries
-    has_many :discounts, through: :summaries
+class Client < ApplicationRecord
+  self.primary_key = :client_id
+
+  has_many :summaries
+  has_many :transactions, through: :summaries
+  has_many :discounts, through: :summaries
 end

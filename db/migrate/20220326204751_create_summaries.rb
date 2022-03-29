@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSummaries < ActiveRecord::Migration[6.1]
   def change
     create_table :summaries, id: false do |t|

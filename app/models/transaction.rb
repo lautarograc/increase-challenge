@@ -1,5 +1,7 @@
-class Transaction < ApplicationRecord
-    self.primary_key = :transaction_id
+# frozen_string_literal: true
 
-    belongs_to :summary, primary_key: :summary_id
+class Transaction < ApplicationRecord
+  self.primary_key = :transaction_id
+
+  belongs_to :summary, primary_key: :summary_id
 end
