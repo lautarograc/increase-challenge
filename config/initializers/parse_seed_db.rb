@@ -1,11 +1,5 @@
 # frozen_string_literal: true
-
-if Client.first.nil?
+if defined?(Rails::Server)
   FetchParseSummary.new.parse_txt
   ParseClient.new.parse_client
-else
-  Transaction.delete_all
-  Discount.delete_all
-  Summary.delete_all
-  Client.delete_all
 end
